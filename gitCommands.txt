@@ -17,3 +17,7 @@ git commit -m"commit message" - committing filename in the staging area
 git rm --cached filename - remove files from the staging area
 git add . - add all files to staging area
 git reset -  remove all files from staging area
+git log - check previous commits
+git log --oneline - small version of previous commits
+
+git branch branchname - creates a new git branch
