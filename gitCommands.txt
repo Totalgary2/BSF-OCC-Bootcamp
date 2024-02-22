@@ -29,9 +29,9 @@ git merge branchname - merges branch files into another branch
 git branch -d branchname - deletes branch if merged in master branch
 git checkout commitID - seeing state of the code in a particular commit
 
-Remote git
+Remote Repo
 
-git remote add origin website - upload existing git files to remote git
-git remote - v - view origin 
-git branch -M main - change branch name to main for consistency
-git p
+git remote add origin websiteURL - upload existing git files to remote git 
+git branch -M main - change master branch name to main for consistency
+git push -u origin main - pushing into origin main branch
+git remote - v - view origin
