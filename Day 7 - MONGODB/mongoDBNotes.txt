@@ -1,0 +1,32 @@
+Create documents
+
+show dbs - Show dbs in your cluster
+use "databasename" - Switch to the db you would like to edit
+db."collectionName".insertOne({"field":"value"}); - Add another document to existing collection
+db."collectionName".insertMany({"field": "value"},{"field":"value"}); - Insert numerous documents in collection
+
+READ documents
+
+db."collectionName".find() - will list all documents in collection
+db."collectionName".find({}) - will list filtered documents in collection
+db."collectionName".find().limit(2) - will list all documents in collection but is limited to first 2
+db."collectionName".find().sort({"username": -1}) - List documents in decending order by username
+db."collectionName".find().sort({"username": 1}) - List documents in acending order by username
+
+Update documents
+db.collectionName.updateOne({"field":"value"}, {$set: {"field": "value"}}); - Updates one document with the specified field and value
+db.collectionName.updateMany({ "field": "value" }, { $set: { "field": "value" }}); -  updates multiple documents
+db.users.deleteOne({"field":"value"}); - deletes the document from the collection
+db.users.deleteMany({"field":"value"}); - deletes multiple documents from the collection
+
+COMPARISON Operators
+db.users.find({"age":{$eq:20}}); - Find operator that equals the value of the field
+db.users.find({"age":{$ne:20}}); - Find operator that is not equal the value of the field
+db.users.find({"age":{$gt:20}}); - Find operator that is greater than the value of the field
+db.users.find({"age":{$lt:20}}); - Find operator that is less than the value of the field
+db.users.find({"age":{$gte:20}}); - Find operator that is greater than or equal to value of the field
+db.users.find({"age":{$gte:20}}); - Find operator that is less than or equal to value of the field
+
+LOGICAL Operators
+db.users.find({$or: [{"status":"inactive"},{"age":{$gte:18}}]}); - or - search for one of the 2 conditions
+db.users.find({$or: [{"status":"inactive"},{"age":{$gte:18}}]}); - And - search for multiple conditions
